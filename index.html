@@ -28,6 +28,14 @@
         <style type="text/css">
 
             p {text-align: justify}
+
+            a {
+              font-weight: 700;
+              font-family: Hind, sans-serif;
+              color: #515769;
+              line-height: 1.4;
+              margin: 0 0 15px;
+            }
         </style>
     </head>
     <!-- END HEAD -->
@@ -64,13 +72,13 @@
                             <ul class="nav navbar-nav navbar-nav-right">
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Home</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#overview">Overview</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#stragegy">Strategy</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#strategy">Strategy</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#mech">Mechanical Design</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#elec">Electrical Design</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#soft">Software Design</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#bill">Bill of Materials</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#time">Timeline</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#conclusion">Conclusion & Advice</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#conclusion">Conclusion</a></li>
                             </ul>
                         </div>
                     </div>
@@ -87,7 +95,7 @@
                 <div class="margin-b-40">
                     <h1 class="promo-block-title">Team 24: Tower Hunter</h1>
                     <h2 class="promo-block-text">ME 210 Winter 2019</h2>
-                    <p class="promo-block-text">Zhongnan Hu, Zhe Huang, Arthur Ji, Lucas Zhou</p>
+                    <h3 class="promo-block-text" text-align="center">Zhongnan Hu, Zhe Huang, Arthur Ji, Lucas Zhou</p>
                 </div>
                 <a class="js_popup-youtube btn-theme btn-theme-md btn-white-bg text-uppercase" href="https://www.youtube.com/watch?v=r8WtRcDKPJs" title="Intro Video"><i class="btn-icon icon-control-play"></i> Watch Tournament Video</a>
             </div>
@@ -422,12 +430,13 @@
                     <div class="row text-center margin-b-40">
                         <div class=""col-md-10 col-md-offset-1"">
                             <h2><font size="10">Software Design</font></h2>
-                            <p><font size="5" color="grey"> The Tower Hunter strategy shows his focus, patience and accuracy. He only aims at one target, which is the King's Landing. He leverages his square body by periodically calibrating the orientation. The effective translational moving pattern of Tower Hunter guarantees his consistently high performance. Let's explore more of his strategy by clicking on the images below.</p>
+                            <p><font size="5" color="grey"> The Tower Hunter strategy shows his focus, patience and accuracy. He only aims at one target, which is the King's Landing. He leverages his square body by periodically calibrating the orientation. The effective translational moving pattern of Tower Hunter guarantees his consistently high performance. Let's explore more by clicking on the images in the implementation subsection. You are also more than welcome to download our code for reference.</p>
                         </div>
                     </div>
                     <div class="row text-center margin-b-40">
                         <div class=""col-md-10 col-md-offset-1"">
                             <h2><font size="6">State Diagram</font></h2>
+                            <p><font size="5" color="grey"> We used nested finite state machines to make the state diagram more structured. Group states include LAUNCH_STATE, SHOOT_KINGS_LANDING_STATE and END_STATE. Basic states contain STATE_MOVE_FOR WARD, STATE_MOVE_BACKWARD, STATE_MOVE_LEFT, STATE_MOVE_RIGHT, STATE_LOAD, STATE_SHOOT and STATE_STOP. Nested finite state machines allow us to split basic states into differen groups by the group states to which they belong. It facilitates coding since we only need to consider transition between basic states which belong to the same group state. Moreover, it will also allow us to easily add new group states, for example like SHOOT_CASTERLY_ROCK_STATE. </p>
                         </div>
                         <div class="row">
                             <center><img class="img-responsive" src="img/finite_state_machine_pic2.png" alt="Image" ></center>
@@ -438,7 +447,7 @@
                     <!-- Strategy -->
                     <div class="row text-center margin-b-40">
                         <div class=""col-md-10 col-md-offset-1"">
-                            <h2><font size="6">Strategy</font></h2>
+                            <h2><font size="6">Implementation</font></h2>
                         </div>
                     </div> 
                     <div class="masonry-grid row row-space-2">
@@ -612,6 +621,12 @@
                     </div>
                     <!-- End Strategy -->
 
+                <div class="row text-center margin-b-40">
+                        <div class=""col-md-10 col-md-offset-1"">
+                            <br /> 
+                            <a href="files/Tower_Hunter_main_test.zip" download><font size="6">Click to Download the Code</a>
+                        </div>
+                </div>
 
                 </div>
 
@@ -666,14 +681,9 @@
                 <!-- <div class="row text-center margin-b-40"> -->
                 <div class="row text-center margin-b-10">
                     <div class=""col-md-10 col-md-offset-1"">
-                        
-<<<<<<< HEAD
+
                         <h2><font size="10">Conclusion & Advice</font></h2>
-                        <p><font size="5" color="grey">In general, our strategy of reducing complexity is proved to be effective. Our robot can destroy the targeted tower with high consistency across runs. For future reference, it is important to select motors that have enough torque/RPM based on design calculations. We initially selected a motor that cannot produce a high enough RPM to launch a Nerf Ammo, and hence had to spent extra money and time buying and installing a replacement. Also, it is important to control the feeding of Nerf Ammo if good shooting consistency is desired, as the flywheel needs a brief moment to recover its speed after a single launch. It is always a good habit to write test functions before integrating all the code implementation. We also benefit a lot from the organized wire labeling during the building process, .Last but not the least, good connection is crucial for the robustness of the overall system. Making sure everything is soldered properly will save hours of debugging.</font></p>
-=======
-                        <h2><font size="10">Conclusion</font></h2>
-                        <p><font size="5" color="grey">In general, our strategy of reducing complexity is proved to be effective. Our robot can destroy the targeted tower with high consistency across runs. For future reference, it is important to select motors that have enough torque/RPM based on design calculations. We initially installed a motor that cannot produce a high enough RPM to launch a Nerf Ammo, and hence had to spent extra money and time buying and installing a replacement. Also, it is important to control the feeding of Nerf Ammo if good shooting consistency is desired, as the flywheel needs a brief moment to recover its speed after a single launch. Last but not the least, good connection is crucial for the robustness of the overall system. Making sure everything is soldered properly will save hours of debugging.</font></p>
->>>>>>> 4bf4ad27e8e152606bab6db425c1b23d5ba44c44
+                        <p><font size="5" color="grey">In general, our strategy of reducing complexity is proved to be effective. Our robot can destroy the targeted tower with high consistency across runs. For future reference, it is important to select motors that have enough torque/RPM based on design calculations. We initially selected a motor that cannot produce a high enough RPM to launch a Nerf Ammo, and hence had to spent extra money and time buying and installing a replacement. Also, it is important to control the feeding of Nerf Ammo if good shooting consistency is desired, as the flywheel needs a brief moment to recover its speed after a single launch. Nested finite state machines allows the transition of basic states to be highly structured. It is always a good habit to write test functions before integrating all the code implementation. We also benefit a lot from the organized wire labeling during the building process. Last but not the least, good connection is crucial for the robustness of the overall system. Making sure everything is soldered properly will save hours of debugging.</font></p>
                         
                     </div>
                 </div>
