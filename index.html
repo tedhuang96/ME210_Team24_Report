@@ -145,7 +145,7 @@
                         <div class="col-sm-4">
                             <img class="img-responsive wow fadeIn" src="img/chassis1_cad.png" alt="Latest Products Image" data-wow-duration=".3" data-wow-delay=".1s">
                             <h4><a href="#">Chassis</a> <span class="text-uppercase margin-l-20">Bottom Layer</span></h4>
-                            <p>The bottom layer houses the drivetrains and ultrasonic sensors. There are four sets of motor and wheel assemblies. The motors are mounted at the center of the chassis using motor mount bracket. We leave two slots for each motor on the chassis board for motor mounting flexibility. Ultrasonic sensors are mounted about 2.5cm from the edge as the detecting range for this sensor has a minimum of 2cm.</p>
+                            <p>The bottom layer houses the drivetrain and ultrasonic sensors. There are four sets of motor and wheel assemblies. The motors are mounted at the center of the chassis using motor mount bracket. We leave two slots for each motor on the chassis board for motor mounting flexibility. Ultrasonic sensors are mounted about 2.5cm from the edge as the detecting range for this sensor has a minimum of 2cm.</p>
                             <p>(click on the images below to see more)</p>
 
                         </div>
@@ -155,7 +155,7 @@
                         <div class="col-sm-4">
                             <img class="img-responsive wow fadeIn" src="img/chassis2_cad.png" alt="Latest Products Image" data-wow-duration=".3" data-wow-delay=".2s">
                             <h4><a href="#">Chassis</a> <span class="text-uppercase margin-l-20">Middle Layer</span></h4>
-                            <p>The middle layer serves as a divider between the bottom chassis and the shooter. We placed 3 L298N motor drivers and battery packs on this layer. Mounting holes are designed for the drivers. Such a design minimizes the amount and length of wires we need to connect and solder. This layer is designed to securely sit on the vertical wheel holder of the bottom layer, ensuring overall chassis robustness.</p>
+                            <p>The middle layer serves as a divider between the bottom chassis and the shooter. We placed three L298N motor drivers and battery packs on this layer. Mounting holes are designed for the drivers. Such a design minimizes the amount and length of wires we need to connect and solder. This layer is designed to securely sit on the vertical wheel holder of the bottom layer, ensuring overall chassis robustness.</p>
                             <p>(click on the images below to see more)</p>
 
                         </div>
@@ -165,7 +165,7 @@
                         <div class="col-sm-4">
                             <img class="img-responsive wow fadeIn" src="img/shooter_cad.jpg" alt="Latest Products Image" data-wow-duration=".3" data-wow-delay=".3s">
                             <h4><a href="#">Shooter</a> <span class="text-uppercase margin-l-20">Top Layer</span></h4>
-                            <p>To achieve the desired shooting speed and impact strength of the ball, a 12 volt DC motor with 4348 RPM is chosen. After speed and energy calculation, we estimate the power offered by this motor should be enough to knock down the object. Moreover, a servo motor is designed to stop the balls and prevent the flywheel from being trapped during the motor's acceleration process. To reduce the risk of damaging the duron board structure due to the motor’s vibration, several mechanisms, including bearing, fixation structure, insertion board, are designed and integrated. The groove has enough space to contain 6 balls.</p>
+                            <p>To achieve the desired shooting speed and impact strength of the Nerf Ammo, a 12 volt DC motor with maximum 4348 RPM is chosen. After speed and energy calculation, we estimate the power produced by this motor should be enough to knock down the object. Moreover, a servo motor is designed to stop the balls and prevent the flywheel from being trapped during the motor's acceleration process. To reduce the risk of damaging the duron board structure due to the motor’s vibration, several components, including bearing, fixation structure, insertion board, are designed and integrated. The groove has enough space to contain 6 balls.</p>
                             <p>(click on the images below to see more)</p>
 
                         </div>
@@ -194,7 +194,7 @@
                                                 <div class="col-sm">
                                                     <div class="margin-t-10 sm-margin-t-0">
                                                         <p>From left to right: motor, mounting bracket, 4mm to 6mm coupler, wheel holder, flat bearing, collar, omniwheel+hole reducer, collar, flat bearing, wheel holder.</p>
-                                                        <p>We had a hard time finding the parts of the right dimensions. We sourced in 210 lab, PRL and Amazon to get the parts we want. Some of the available parts are in imperial unit, while the others are in metric unit. This made the building process much slower than we have expected. For example, we sanded the 1/8" square shaft to fit in a 4mm coupler. </p>
+                                                        <p>We had a hard time finding the parts of the right dimensions. We sourced in the 210 lab, PRL and Amazon to get the parts we want. Some of the available parts are in imperial unit, while the others are in metric unit. This made the building process much slower than we have expected. For example, we sanded the 1/8" square shaft to fit in a 4mm coupler. </p>
 
                                                     </div>
                                                 </div>
@@ -246,7 +246,7 @@
                                             <div class="row">
                                                 <div class="col-sm">
                                                     <div class="margin-t-10 sm-margin-t-0">
-                                                        <p>The chassis subassembly is fully built and all electronic components are connected. Two 7.2V battery packs are connected in serial. Two voltage regulators adjust the voltage to 12V and 5V respectively. This subassembly is tested to make sure power system and wheels are functioning properly</p>
+                                                        <p>The chassis subassembly is fully built and all electronic components are connected. Two 7.2V battery packs are connected in series. Two voltage regulators adjust the voltage to 12V and 5V respectively. This subassembly is tested to make sure power system and wheels are functioning properly</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -327,7 +327,7 @@
                     <div class=""col-md-10 col-md-offset-1"">
                         
                         <h2><font size="10">Electrical Design</font></h2>
-                        <p><font size="5" color="grey"> The robot is powered by two 7.2V NiMH rechargeable battery packs. A 5V and a 12V step-up/step-down voltage regulator (POLOLU S18V20F5 and S18V20F12) are used to produce stable 5V and 12V voltage inputs. The four motors on the drivetrain are grouped into two pairs based on their orientations (front/back and left/right) and controlled by to L298 motor drivers. Since our general strategy does not require differential drive, we give the same control signal to each pair of motors, thus reducing pin allocation on the microcontroller. The robot localizes itself using four ultrasonic sensors (HC-SR04), one in each direction. The sensors receives a trigger signal from the microcontroller and returns an echo pulse output, from which distance can be deduced. The shooting motor is controlled by a third L298 motor driver, so that we can adjust the projecting range by changing its speed. A servo is used to feed Nerf Ammo into the shooting motor. Under time and budget limitation, we employ a strategy of reducing complexity and strips IR-sensing and line-following capabilities. We are able to control everything with one Teensy LC microcontroller board, avoiding potential issues in communication and synchronization. </font></p>
+                        <p><font size="5" color="grey"> The robot is powered by two 7.2V NiMH rechargeable battery packs. A 5V and a 12V step-up/step-down voltage regulator (POLOLU S18V20F5 and S18V20F12) are used to produce stable 5V and 12V voltage inputs. The four motors on the drivetrain are grouped into two pairs based on their orientations (front/back and left/right) and controlled by two L298N motor drivers. Since our general strategy does not require differential drive, we give the same control signal to each pair of motors, thus saving pin allocation on the microcontroller. The robot localizes itself using four ultrasonic sensors (HC-SR04), one in each direction. The sensors receives a trigger signal from the microcontroller and returns an echo pulse output, from which distance can be deduced. The shooting motor is controlled by a third L298N motor driver, so that we can adjust the projecting range by changing its speed. A servo is used to feed Nerf Ammo into the shooting motor. Under time and budget limitation, we employ a strategy of reducing complexity and strips IR-sensing and line-following capabilities. We are able to control everything with one Teensy LC microcontroller board, avoiding potential issues in communication and synchronization. </font></p>
                         
                     </div>
                 </div>
@@ -408,7 +408,7 @@
                     <div class=""col-md-10 col-md-offset-1"">
                         
                         <h2><font size="10">Conclusion</font></h2>
-                        <p><font size="5" color="grey">In general, our strategy of reducing complexity is proved to be effective. Our robot can destroy the targeted tower with high consistency across runs. For future reference, it is important to select motors that have enough torque/RPM based on design calculations. We initially selected a motor that cannot produce a high enough RPM to launch a Nerf Ammo, and hence had to spent extra money and time buying and installing a replacement. Also, it is important to control the feeding of Nerf Ammo if good shooting consistency is desired, as the flywheel needs a brief moment to recover its speed after a single launch. Last but not the least, good connection is crucial for the robustness of the overall system. Making sure everything is soldered properly will save hours of debugging.</font></p>
+                        <p><font size="5" color="grey">In general, our strategy of reducing complexity is proved to be effective. Our robot can destroy the targeted tower with high consistency across runs. For future reference, it is important to select motors that have enough torque/RPM based on design calculations. We initially installed a motor that cannot produce a high enough RPM to launch a Nerf Ammo, and hence had to spent extra money and time buying and installing a replacement. Also, it is important to control the feeding of Nerf Ammo if good shooting consistency is desired, as the flywheel needs a brief moment to recover its speed after a single launch. Last but not the least, good connection is crucial for the robustness of the overall system. Making sure everything is soldered properly will save hours of debugging.</font></p>
                         
                     </div>
                 </div>
