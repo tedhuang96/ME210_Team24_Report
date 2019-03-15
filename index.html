@@ -64,6 +64,7 @@
                             <ul class="nav navbar-nav navbar-nav-right">
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Home</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#overview">Overview</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#stragegy">Strategy</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#mech">Mechanical Design</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#elec">Electrical Design</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#soft">Software Design</a></li>
@@ -131,6 +132,73 @@
             </div>
         </div>
         <!-- End overview -->
+
+        <!-- strategy -->
+        <div id="strategy">
+            <div class="container content-lg">
+                <!-- <div class="row text-center margin-b-40"> -->
+                <div class="row text-center margin-b-40">
+                    <div class=""col-md-10 col-md-offset-1"">
+                        
+                        <h2><font size="10">Strategy</font></h2>
+                        <p><font size="5" color="grey"> In this competition, a robot needs to navigate from its starting position to a armory, press a switch, wait for the manual loading of Nerf Ammo, leave the armory, and fire at opponent’s towers. Within the 2:10 game duration, the robot can repeat the loading/firing cycle for as many times with a maximum of six Nerf Ammo per loading. 
+                        </font></p>
+                        
+                        <p><font size="5" color="grey">
+
+						Our robot drives on four powered omni wheels for omni-directional movement. We use wall-following navigation to drive to both the armory and shooting positions. To achieve this, we design the robot to have a square shape so that it can easily align with the walls, and use four supersonic sensors to measure distance in each direction. On the launching aspect, we use one flywheel to shoot balls at target, as this provides the ability to fire rapidly. A servo motor is used to control the feeding of balls into the flywheel, so that the flywheel can have a brief moment to restore its RPM after firing a single shot.
+                        </font></p>
+                        
+                        <p><font size="5" color="grey"> 
+
+						The arena of the competition as well as our strategy for crushing the opponent’s Kings Landing is shown below. 
+
+						 </font></p>
+                        
+                    </div>
+                </div>
+                <!--// end row -->
+                <div class="row">
+                	   <head>
+					      <title>change picture</title>
+					      <script type = "text/javascript">
+					          function displayNextImage() {
+					              x = (x === images.length - 1) ? 0 : x + 1;
+					              document.getElementById("img").src = images[x];
+					          }
+
+					          function displayPreviousImage() {
+					              x = (x <= 0) ? images.length - 1 : x - 1;
+					              document.getElementById("img").src = images[x];
+					          }
+
+					          function startTimer() {
+					              setInterval(displayNextImage, 3000);
+					          }
+
+					          var images = [], x = -1;
+					          images[0] = "img/1.png";
+					          images[1] = "img/2.png";
+					          images[2] = "img/3.png";
+					          images[3] = "img/4.png";
+							  images[4] = "img/5.png";
+							  images[5] = "img/6.png";
+							  images[6] = "img/7.png";
+
+					      </script>
+					   </head>
+
+					   <body onload = "startTimer()">
+					       <center><img id="img" style="width: 90%; height: 90%" src="img/1.png" alt="Image"/></center>
+					   </body>
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+        <!-- End strategy -->
+
+
+
         <div class="tlinks">Collect from <a href="http://www.cssmoban.com/" >网站建设</a></div>
 
             <!-- MECHANICAL -->
@@ -150,7 +218,7 @@
                         <div class="col-sm-4">
                             <img class="img-responsive wow fadeIn" src="img/chassis1_cad.png" alt="Latest Products Image" data-wow-duration=".3" data-wow-delay=".1s">
                             <h4><a href="#">Chassis</a> <span class="text-uppercase margin-l-20">Bottom Layer</span></h4>
-                            <p>The bottom layer houses the drivetrains and ultrasonic sensors. There are four sets of motor and wheel assemblies. The motors are mounted at the center of the chassis using motor mount bracket. We leave two slots for each motor on the chassis board for motor mounting flexibility. Ultrasonic sensors are mounted about 2.5cm from the edge as the detecting range for this sensor has a minimum of 2cm.</p>
+                            <p>The bottom layer houses the drivetrain and ultrasonic sensors. There are four sets of motor and wheel assemblies. The motors are mounted at the center of the chassis using motor mount bracket. We leave two slots for each motor on the chassis board for motor mounting flexibility. Ultrasonic sensors are mounted about 2.5cm from the edge as the detecting range for this sensor has a minimum of 2cm.</p>
                             <p>(click on the images below to see more)</p>
 
                         </div>
@@ -160,7 +228,7 @@
                         <div class="col-sm-4">
                             <img class="img-responsive wow fadeIn" src="img/chassis2_cad.png" alt="Latest Products Image" data-wow-duration=".3" data-wow-delay=".2s">
                             <h4><a href="#">Chassis</a> <span class="text-uppercase margin-l-20">Middle Layer</span></h4>
-                            <p>The middle layer serves as a divider between the bottom chassis and the shooter. We placed 3 L298N motor drivers and battery packs on this layer. Mounting holes are designed for the drivers. Such a design minimizes the amount and length of wires we need to connect and solder. This layer is designed to securely sit on the vertical wheel holder of the bottom layer, ensuring overall chassis robustness.</p>
+                            <p>The middle layer serves as a divider between the bottom chassis and the shooter. We placed three L298N motor drivers and battery packs on this layer. Mounting holes are designed for the drivers. Such a design minimizes the amount and length of wires we need to connect and solder. This layer is designed to securely sit on the vertical wheel holder of the bottom layer, ensuring overall chassis robustness.</p>
                             <p>(click on the images below to see more)</p>
 
                         </div>
@@ -170,7 +238,7 @@
                         <div class="col-sm-4">
                             <img class="img-responsive wow fadeIn" src="img/shooter_cad.jpg" alt="Latest Products Image" data-wow-duration=".3" data-wow-delay=".3s">
                             <h4><a href="#">Shooter</a> <span class="text-uppercase margin-l-20">Top Layer</span></h4>
-                            <p>To achieve the desired shooting speed and impact strength of the ball, a 12 volt DC motor with 4348 RPM is chosen. After speed and energy calculation, we estimate the power offered by this motor should be enough to knock down the object. Moreover, a servo motor is designed to stop the balls and prevent the flywheel from being trapped during the motor's acceleration process. To reduce the risk of damaging the duron board structure due to the motor’s vibration, several mechanisms, including bearing, fixation structure, insertion board, are designed and integrated. The groove has enough space to contain 6 balls.</p>
+                            <p>To achieve the desired shooting speed and impact strength of the Nerf Ammo, a 12 volt DC motor with maximum 4348 RPM is chosen. After speed and energy calculation, we estimate the power produced by this motor should be enough to knock down the object. Moreover, a servo motor is designed to stop the balls and prevent the flywheel from being trapped during the motor's acceleration process. To reduce the risk of damaging the duron board structure due to the motor’s vibration, several components, including bearing, fixation structure, insertion board, are designed and integrated. The groove has enough space to contain 6 balls.</p>
                             <p>(click on the images below to see more)</p>
 
                         </div>
@@ -199,7 +267,7 @@
                                                 <div class="col-sm">
                                                     <div class="margin-t-10 sm-margin-t-0">
                                                         <p>From left to right: motor, mounting bracket, 4mm to 6mm coupler, wheel holder, flat bearing, collar, omniwheel+hole reducer, collar, flat bearing, wheel holder.</p>
-                                                        <p>We had a hard time finding the parts of the right dimensions. We sourced in 210 lab, PRL and Amazon to get the parts we want. Some of the available parts are in imperial unit, while the others are in metric unit. This made the building process much slower than we have expected. For example, we sanded the 1/8" square shaft to fit in a 4mm coupler. </p>
+                                                        <p>We had a hard time finding the parts of the right dimensions. We sourced in the 210 lab, PRL and Amazon to get the parts we want. Some of the available parts are in imperial unit, while the others are in metric unit. This made the building process much slower than we have expected. For example, we sanded the 1/8" square shaft to fit in a 4mm coupler. </p>
 
                                                     </div>
                                                 </div>
@@ -251,7 +319,7 @@
                                             <div class="row">
                                                 <div class="col-sm">
                                                     <div class="margin-t-10 sm-margin-t-0">
-                                                        <p>The chassis subassembly is fully built and all electronic components are connected. Two 7.2V battery packs are connected in serial. Two voltage regulators adjust the voltage to 12V and 5V respectively. This subassembly is tested to make sure power system and wheels are functioning properly</p>
+                                                        <p>The chassis subassembly is fully built and all electronic components are connected. Two 7.2V battery packs are connected in series. Two voltage regulators adjust the voltage to 12V and 5V respectively. This subassembly is tested to make sure power system and wheels are functioning properly</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -332,7 +400,7 @@
                     <div class=""col-md-10 col-md-offset-1"">
                         
                         <h2><font size="10">Electrical Design</font></h2>
-                        <p><font size="5" color="grey"> The robot is powered by two 7.2V NiMH rechargeable battery packs. A 5V and a 12V step-up/step-down voltage regulator (POLOLU S18V20F5 and S18V20F12) are used to produce stable 5V and 12V voltage inputs. The four motors on the drivetrain are grouped into two pairs based on their orientations (front/back and left/right) and controlled by to L298 motor drivers. Since our general strategy does not require differential drive, we give the same control signal to each pair of motors, thus reducing pin allocation on the microcontroller. The robot localizes itself using four ultrasonic sensors (HC-SR04), one in each direction. The sensors receives a trigger signal from the microcontroller and returns an echo pulse output, from which distance can be deduced. The shooting motor is controlled by a third L298 motor driver, so that we can adjust the projecting range by changing its speed. A servo is used to feed Nerf Ammo into the shooting motor. Under time and budget limitation, we employ a strategy of reducing complexity and strips IR-sensing and line-following capabilities. We are able to control everything with one Teensy LC microcontroller board, avoiding potential issues in communication and synchronization. </font></p>
+                        <p><font size="5" color="grey"> The robot is powered by two 7.2V NiMH rechargeable battery packs. A 5V and a 12V step-up/step-down voltage regulator (POLOLU S18V20F5 and S18V20F12) are used to produce stable 5V and 12V voltage inputs. The four motors on the drivetrain are grouped into two pairs based on their orientations (front/back and left/right) and controlled by two L298N motor drivers. Since our general strategy does not require differential drive, we give the same control signal to each pair of motors, thus saving pin allocation on the microcontroller. The robot localizes itself using four ultrasonic sensors (HC-SR04), one in each direction. The sensors receives a trigger signal from the microcontroller and returns an echo pulse output, from which distance can be deduced. The shooting motor is controlled by a third L298N motor driver, so that we can adjust the projecting range by changing its speed. A servo is used to feed Nerf Ammo into the shooting motor. Under time and budget limitation, we employ a strategy of reducing complexity and strips IR-sensing and line-following capabilities. We are able to control everything with one Teensy LC microcontroller board, avoiding potential issues in communication and synchronization. </font></p>
                         
                     </div>
                 </div>
@@ -599,8 +667,13 @@
                 <div class="row text-center margin-b-10">
                     <div class=""col-md-10 col-md-offset-1"">
                         
+<<<<<<< HEAD
                         <h2><font size="10">Conclusion & Advice</font></h2>
                         <p><font size="5" color="grey">In general, our strategy of reducing complexity is proved to be effective. Our robot can destroy the targeted tower with high consistency across runs. For future reference, it is important to select motors that have enough torque/RPM based on design calculations. We initially selected a motor that cannot produce a high enough RPM to launch a Nerf Ammo, and hence had to spent extra money and time buying and installing a replacement. Also, it is important to control the feeding of Nerf Ammo if good shooting consistency is desired, as the flywheel needs a brief moment to recover its speed after a single launch. It is always a good habit to write test functions before integrating all the code implementation. We also benefit a lot from the organized wire labeling during the building process, .Last but not the least, good connection is crucial for the robustness of the overall system. Making sure everything is soldered properly will save hours of debugging.</font></p>
+=======
+                        <h2><font size="10">Conclusion</font></h2>
+                        <p><font size="5" color="grey">In general, our strategy of reducing complexity is proved to be effective. Our robot can destroy the targeted tower with high consistency across runs. For future reference, it is important to select motors that have enough torque/RPM based on design calculations. We initially installed a motor that cannot produce a high enough RPM to launch a Nerf Ammo, and hence had to spent extra money and time buying and installing a replacement. Also, it is important to control the feeding of Nerf Ammo if good shooting consistency is desired, as the flywheel needs a brief moment to recover its speed after a single launch. Last but not the least, good connection is crucial for the robustness of the overall system. Making sure everything is soldered properly will save hours of debugging.</font></p>
+>>>>>>> 4bf4ad27e8e152606bab6db425c1b23d5ba44c44
                         
                     </div>
                 </div>
