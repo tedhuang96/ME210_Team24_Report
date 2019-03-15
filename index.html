@@ -59,6 +59,7 @@
                             <ul class="nav navbar-nav navbar-nav-right">
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Home</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#overview">Overview</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#stragegy">Strategy</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#mech">Mechanical Design</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#elec">Electrical Design</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#soft">Software Design</a></li>
@@ -126,6 +127,73 @@
             </div>
         </div>
         <!-- End overview -->
+
+        <!-- strategy -->
+        <div id="strategy">
+            <div class="container content-lg">
+                <!-- <div class="row text-center margin-b-40"> -->
+                <div class="row text-center margin-b-40">
+                    <div class=""col-md-10 col-md-offset-1"">
+                        
+                        <h2><font size="10">Strategy</font></h2>
+                        <p><font size="5" color="grey"> In this competition, a robot needs to navigate from its starting position to a armory, press a switch, wait for the manual loading of Nerf Ammo, leave the armory, and fire at opponent’s towers. Within the 2:10 game duration, the robot can repeat the loading/firing cycle for as many times with a maximum of six Nerf Ammo per loading. 
+                        </font></p>
+                        
+                        <p><font size="5" color="grey">
+
+						Our robot drives on four powered omni wheels for omni-directional movement. We use wall-following navigation to drive to both the armory and shooting positions. To achieve this, we design the robot to have a square shape so that it can easily align with the walls, and use four supersonic sensors to measure distance in each direction. On the launching aspect, we use one flywheel to shoot balls at target, as this provides the ability to fire rapidly. A servo motor is used to control the feeding of balls into the flywheel, so that the flywheel can have a brief moment to restore its RPM after firing a single shot.
+                        </font></p>
+                        
+                        <p><font size="5" color="grey"> 
+
+						The arena of the competition as well as our strategy for crushing the opponent’s Kings Landing is shown below. 
+
+						 </font></p>
+                        
+                    </div>
+                </div>
+                <!--// end row -->
+                <div class="row">
+                	   <head>
+					      <title>change picture</title>
+					      <script type = "text/javascript">
+					          function displayNextImage() {
+					              x = (x === images.length - 1) ? 0 : x + 1;
+					              document.getElementById("img").src = images[x];
+					          }
+
+					          function displayPreviousImage() {
+					              x = (x <= 0) ? images.length - 1 : x - 1;
+					              document.getElementById("img").src = images[x];
+					          }
+
+					          function startTimer() {
+					              setInterval(displayNextImage, 3000);
+					          }
+
+					          var images = [], x = -1;
+					          images[0] = "img/1.png";
+					          images[1] = "img/2.png";
+					          images[2] = "img/3.png";
+					          images[3] = "img/4.png";
+							  images[4] = "img/5.png";
+							  images[5] = "img/6.png";
+							  images[6] = "img/7.png";
+
+					      </script>
+					   </head>
+
+					   <body onload = "startTimer()">
+					       <center><img id="img" style="width: 90%; height: 90%" src="img/1.png" alt="Image"/></center>
+					   </body>
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+        <!-- End strategy -->
+
+
+
         <div class="tlinks">Collect from <a href="http://www.cssmoban.com/" >网站建设</a></div>
 
             <!-- MECHANICAL -->
